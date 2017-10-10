@@ -103,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="JavaScript.js" />
     <Content Include="MIIS.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

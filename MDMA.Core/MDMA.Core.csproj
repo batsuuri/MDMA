@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DCLI.cs" />
+    <Compile Include="Classes\TollCalc.cs" />
     <Compile Include="Helper\Crypto.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Helper\Functions.cs" />

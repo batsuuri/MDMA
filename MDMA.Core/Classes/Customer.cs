@@ -15,7 +15,7 @@ namespace MDMA
         public string PGroup { get; set; }
         public string PNumAmends { get; set; }
         public string Phone { get; set; }
-        public string ZipCode { get; set; }
         public string Rn { get; set; }
+        public bool IsOrg { get; set; }
     }
 }

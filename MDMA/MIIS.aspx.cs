@@ -23,8 +23,18 @@ namespace MDMA
                 CustDetail.InnerText = Func.ToStr(res.Data);
             }
             else
-                CustDetail.InnerText = res.Desc;        }
+                CustDetail.InnerText = res.Desc + Environment.NewLine + Func.ToStr(res.Data);        }
 
-
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            WebAPI.MIIS m = new WebAPI.MIIS();
+            Result res = m.GetVechileInfo(txtVN.Text);
+            if (res.Succeed)
+            {
+                VechileDetail.InnerText = Func.ToStr(res.Data);
+            }
+            else
+                VechileDetail.InnerText = res.Desc + Environment.NewLine + Func.ToStr(res.Data);
+        }
     }
 }
