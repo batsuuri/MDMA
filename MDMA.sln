@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDMA", "MDMA\MDMA.csproj", "{2AB7C9CA-6F65-4DA0-A0CA-0BD772304545}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDMA.Core", "MDMA.Core\MDMA.Core.csproj", "{73ACC230-531A-43F8-ABE7-FF2B6B63FD30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2AB7C9CA-6F65-4DA0-A0CA-0BD772304545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AB7C9CA-6F65-4DA0-A0CA-0BD772304545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AB7C9CA-6F65-4DA0-A0CA-0BD772304545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73ACC230-531A-43F8-ABE7-FF2B6B63FD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73ACC230-531A-43F8-ABE7-FF2B6B63FD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73ACC230-531A-43F8-ABE7-FF2B6B63FD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73ACC230-531A-43F8-ABE7-FF2B6B63FD30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
