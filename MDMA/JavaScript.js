@@ -38,7 +38,8 @@
                         parseInt(e("#Experience").val()) < 2 ? 1.2 : 1.15 :
                         parseInt(e("#Experience").val()) < 2 ? 1.1 : 1, l = d) :
                     isNaN(parseInt(e("#Experience").val())) ? alert("Туршлага тоогоор байх хэрэгтэй. ") :
-                        (d = 117 - parseInt(e("#Rn").val().substring(2, 4)) < 22 ?
+                        (
+                            d = 117 - parseInt(e("#Rn").val().substring(2, 4)) < 22 ?
                             parseInt(e("#Experience").val()) < 2 ? 1.2 : 1.15 :
                             117 - parseInt(e("#Rn").val.substring(2, 4)) == 22 ?
                                 parseInt(e("#Rn").val().substring(4, 6)) < parseInt(ddate.substring(5, 7)) ?
@@ -46,7 +47,8 @@
                                     parseInt(e("#Rn").val().substring(4, 6)) === parseInt(ddate.substring(5, 7)) &&
                                         parseInt(e("#Rn").val().substring(6, 8)) <= parseInt(ddate.substring(8, 10)) ?
                                         parseInt(e("#Experience").val()) < 2 ? 1.1 : 1 : parseInt(e("#Experience").val()) < 2 ? 1.2 : 1.15 :
-                                parseInt(e("#Experience").val()) < 2 ? 1.1 : 1, l = d), i = parseInt(e("#PNumAmends").val()) >= 4 ? 4 :
+                                parseInt(e("#Experience").val()) < 2 ? 1.1 : 1, l = d),
+                    i = parseInt(e("#PNumAmends").val()) >= 4 ? 4 :
                                     parseInt(e("#PNumAmends").val());
                 var s = n[r[i][a]];
                 if (t.rows.length <= 1) e("#ci2").html(s), e("#prt_ci2").html(s), e("#ci3").html(l), e("#prt_ci3").html(l);
@@ -154,9 +156,10 @@
         if (2 != e("#Contracttype").val())
             if (0 == e("#Islimitdrivers").val()) e("#ci2").text("1"), e("#prt_ci2").text("1"), e("#ci3").text("1.2"), e("#prt_ci3").text("1.2");
             else {
-                e("#fperson").is(":checked") ? (d = parseInt(e("#Familyname").val()) < 25 ?
-                    parseInt(e("#Experience").val()) < 3 ? 1.2 : 1.15 :
-                    parseInt(e("#Experience").val()) < 3 ? 1.1 : 1, l = d) : isNaN(parseInt(e("#Experience").val())) ? alert("Туршлага тоогоор байх хэрэгтэй. ") :
+                e("#fperson").is(":checked")
+                    ? (d = parseInt(e("#Familyname").val()) < 25 ? parseInt(e("#Experience").val()) < 3 ? 1.2 : 1.15 :
+                        parseInt(e("#Experience").val()) < 3 ? 1.1 : 1, l = d)
+                    : isNaN(parseInt(e("#Experience").val())) ? alert("Туршлага тоогоор байх хэрэгтэй. ") :
                         (d = 117 - parseInt(e("#Rn").val().substring(2, 4)) < 25 ? parseInt(e("#Experience").val()) < 3 ? 1.2 : 1.15 :
                             117 - parseInt(e("#Rn").val().substring(2, 4)) == 25 ?
                                 parseInt(e("#Rn").val().substring(4, 6)) <= parseInt(ddate.substring(5, 7)) &&

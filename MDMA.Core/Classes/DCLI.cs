@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MDMA.Core
 {
-    class DCLI
+     public class DCLI
     {
         public Customer Driver { get; set; }
-        public Vechile Vechile { get; set; }
+        public Vehicle Vehicle { get; set; }
         public Customer[] Drivers { get; set; }
         public bool IsLimitedDrivers { get; set; }
 

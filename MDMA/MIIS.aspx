@@ -30,6 +30,12 @@
        <div>
            <textarea id="VechileDetail" runat="server"></textarea>
        </div>
+        <div>
+        <asp:Button ID="btnFeeCalc" runat="server" OnClick="Button3_Click" Text="Calculate" /></div>
+         <asp:TextBox ID="txtFee" runat="server">0</asp:TextBox>
+         <div>
+           <textarea id="txtIt" runat="server"></textarea>
+       </div>
 &nbsp;&nbsp;
     </form>
 </body>
