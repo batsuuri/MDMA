@@ -9,8 +9,6 @@ namespace MDMA.Core
 {
     public class FeeCalc
     {
-
-
         // Calculation of Drivers Compulsory Liability Insurance
         public RatioDCLI CalcDCLI(DCLI dcli)
         {
@@ -153,9 +151,37 @@ namespace MDMA.Core
             #region I9
             // Achaanii machinii dugaar oruulj uzeh
             #endregion
+
+            #region CalcFee
+            double initialFee = 33000; // 
+
+            //"A" == e("#Transporttype").val() && (e("#ci0").text("12500"), e("#prt_ci0").text("12500")),
+            //"B" == e("#Transporttype").val() && (e("#ci0").text("33000"), e("#prt_ci0").text("33000")),
+            //"C" == e("#Transporttype").val() && (e("#ci0").text("42500"), e("#prt_ci0").text("42500")),
+            //"D" == e("#Transporttype").val() && (e("#ci0").text("53000"), e("#prt_ci0").text("53000")),
+            //"M" == e("#Transporttype").val() && (e("#ci0").text("12500"), e("#prt_ci0").text("12500")),
+            switch (dcli.Vehicle.Transporttype.ToUpper())
+            {
+                case "A":
+                case "M":
+                    initialFee = 12500;
+                    break;
+                case "C":
+                    initialFee = 42500;
+                    break;
+                case "D":
+                    initialFee = 53000;
+                    break;
+                default:
+                    break;
+            }
+            rate.TotalFee = initialFee * rate.I1 * rate.I2 * rate.I3 * rate.I4 * rate.I5 * rate.I6 * rate.I7 * rate.I8 * rate.I9;
+           
+            #endregion
             return rate;
         }
 
+        #region Helper Function
         private double CalcI3(Customer driver) {
             double it = 1;
 
@@ -197,59 +223,6 @@ namespace MDMA.Core
             //ff =117 - parseInt(e("#Rn").val().substring(2, 4)) < 25 ? parseInt(e("#Experience").val()) < 3 ? 1.2 : 1.15 : 117 - parseInt(e("#Rn").val().substring(2, 4)) == 25 ? parseInt(e("#Rn").val().substring(4, 6)) <= parseInt(ddate.substring(5, 7)) && parseInt(e("#Rn").val().substring(6, 8)) <= parseInt(ddate.substring(8, 10)) ? parseInt(e("#Experience").val()) < 3 ? 1.1 : 1 : parseInt(e("#Rn").val().substring(4, 6)) == parseInt(ddate.substring(5, 7)) && parseInt(e("#Rn").val().substring(6, 8)) <= parseInt(ddate.substring(8, 10)) ? parseInt(e("#Experience").val()) < 3 ? 1.1 : 1 : parseInt(e("#Experience").val()) < 3 ? 1.2 : 1.15 : parseInt(e("#Experience").val()) < 3 ? 1.1 : 1
 
         }
-    }
-    public struct RatioDCLI
-    {
-        public double I1;
-        public double I2;
-        public double I3;
-        public double I4;
-        public double I5;
-        public double I6;
-        public double I7;
-        public double I8;
-        public double I9;
-        public double TotalFee;
-
-        public void CalcTotalFee(string dtype) {
-            double fee = 0;
-            double initialFee = 33000; // 
-
-        //"A" == e("#Transporttype").val() && (e("#ci0").text("12500"), e("#prt_ci0").text("12500")),
-        //"B" == e("#Transporttype").val() && (e("#ci0").text("33000"), e("#prt_ci0").text("33000")),
-        //"C" == e("#Transporttype").val() && (e("#ci0").text("42500"), e("#prt_ci0").text("42500")),
-        //"D" == e("#Transporttype").val() && (e("#ci0").text("53000"), e("#prt_ci0").text("53000")),
-        //"M" == e("#Transporttype").val() && (e("#ci0").text("12500"), e("#prt_ci0").text("12500")),
-            switch (dtype.ToUpper())
-            {
-                case "A":
-                case "M":
-                    initialFee = 12500;
-                    break;
-                case "C":
-                    initialFee = 42500;
-                    break;
-                case "D":
-                    initialFee = 53000;
-                    break;
-                default:
-                    break;
-            }
-            fee = initialFee * this.I1 * I2 * I3 * I4 * I5 * I6 * I7 * I8 * I9;
-            TotalFee =  fee;
-        }
-        public RatioDCLI(int i)
-        {
-            I1 = i;
-            I2 = i;
-            I3 = i;
-            I4 = i;
-            I5 = i;
-            I6 = i;
-            I7 = i;
-            I8 = i;
-            I9 = i;
-            TotalFee = 0;
-        }
+        #endregion
     }
 }

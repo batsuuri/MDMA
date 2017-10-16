@@ -43,14 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\DCLI.cs" />
+    <Compile Include="Entity\DCLI.cs" />
+    <Compile Include="Entity\OneC.cs" />
     <Compile Include="Classes\TollCalc.cs" />
     <Compile Include="Helper\Crypto.cs" />
-    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Entity\Customer.cs" />
     <Compile Include="Helper\Functions.cs" />
     <Compile Include="Helper\Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\Vehicle.cs" />
+    <Compile Include="Entity\Vehicle.cs" />
     <Compile Include="Classes\WebAPI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

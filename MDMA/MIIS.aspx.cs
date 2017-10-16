@@ -55,7 +55,6 @@ namespace MDMA
             dcli.Drivers = null;
 
             RatioDCLI rate  = calc.CalcDCLI(dcli);
-            rate.CalcTotalFee(dcli.Vehicle.Transporttype);
             txtFee.Text = Func.ToStr(rate.TotalFee);
 
             string it = "Й1: " + Func.ToStr(rate.I1);

@@ -176,5 +176,29 @@ namespace MDMA
                 return res;
             }
         }
+
+        public class OneC
+        {
+            public Result GetCustomer(string register_no) {
+                Result res = new Result(true);
+
+
+                return res;
+            }
+            public Result GetContract(string register_no)
+            {
+                Result res = new Result(true);
+
+
+                return res;
+            }
+            public Result GetContractByCN(string contract_no)
+            {
+                Result res = new Result(true);
+
+
+                return res;
+            }
+        }
     }
 }
