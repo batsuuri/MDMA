@@ -179,6 +179,15 @@ namespace MDMA
 
         public class OneC
         {
+            public static string _url = Func.ToStr(ConfigurationManager.AppSettings["1C_Url"]);
+
+            public Result GetCustomerByPhoe(string phone)
+            {
+                Result res = new Result(true);
+
+
+                return res;
+            }
             public Result GetCustomer(string register_no) {
                 Result res = new Result(true);
 

@@ -624,6 +624,40 @@ namespace MDMA
             return hashList;
         }
 
+        public static Result JsonToObject(string json, ref object obj) {
+            Result res = new Result(true);
+            
+            try
+            {
+                obj = Newtonsoft.Json.JsonConvert.DeserializeObject(json,obj.GetType());
+            }
+            catch (Exception ex)
+            {
+                Main.ErrorLog("Json2Object", ex);
+                res.Succeed = false;
+                res.Desc = ex.Message;
+            }
+
+            return res;
+        }
+
+        public static Result ObjectToJson(object obj)
+        {
+            Result res = new Result(true);
+
+            try
+            {
+                res.Desc = Newtonsoft.Json.JsonConvert.SerializeObject(obj);
+            }
+            catch (Exception ex)
+            {
+                Main.ErrorLog("ObjectToJson", ex);
+                res.Succeed = false;
+                res.Desc = ex.Message;
+            }
+
+            return res;
+        }
         #endregion
 
         #region DropDownList Functions

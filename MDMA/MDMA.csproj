@@ -104,14 +104,20 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="JavaScript.js" />
+    <Content Include="MDMA.asmx" />
     <Content Include="MIIS.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Classes\ServiceUser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MDMA.asmx.cs">
+      <DependentUpon>MDMA.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="MIIS.aspx.cs">
       <DependentUpon>MIIS.aspx</DependentUpon>
@@ -134,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Classes\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

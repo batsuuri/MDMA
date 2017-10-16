@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MDMA.Core
 {
-    public class OneC
+    public class OneCEntity
     {
         public class Customer
         {
@@ -57,8 +57,7 @@ namespace MDMA.Core
             public string journal_no { get; set; }
             public string create_user_id { get; set; }
             public string transfer_amount { get; set; }
-            public string service_name { get; set; }
-            public Product product { get; set; }
+            public Product[] product { get; set; }
         }
     }
 }

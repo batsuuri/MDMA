@@ -21,8 +21,8 @@ namespace MDMA
             if (res.Succeed)
             {
                 CustDetail.InnerText = Func.ToStr(res.Data);
-                Customer cust = new Customer();
-                cust = Newtonsoft.Json.JsonConvert.DeserializeObject<Customer>(Func.ToStr(res.Data));
+                MIISEntity.Customer cust = new MIISEntity.Customer();
+                cust = Newtonsoft.Json.JsonConvert.DeserializeObject<MIISEntity.Customer>(Func.ToStr(res.Data));
                 Session["Cust"] = cust;
             }
             else
@@ -36,8 +36,8 @@ namespace MDMA
             {
                 VechileDetail.InnerText = Func.ToStr(res.Data);
 
-                Vehicle car = new Vehicle();
-                car = Newtonsoft.Json.JsonConvert.DeserializeObject<Vehicle>(Func.ToStr(res.Data));
+                MIISEntity.Vehicle car = new Core.MIISEntity.Vehicle();
+                car = Newtonsoft.Json.JsonConvert.DeserializeObject<MIISEntity.Vehicle>(Func.ToStr(res.Data));
 
                 Session["Car"] = car;
             }
